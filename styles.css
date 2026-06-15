@@ -1,6 +1,7 @@
 html {
     overflow-x: hidden;
 }
+
 header {
     background-color: rgb(91, 91, 91);
     position: fixed;
@@ -10,6 +11,12 @@ header {
     left: 0;
     border-bottom: 1px solid black;
 }
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
 .companyName {
     text-align: center;
     color: white;
@@ -32,4 +39,48 @@ header {
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+.mission {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 25%;
+    height: 250px;
+    border-radius: 25px;
+    margin: 300px auto auto 100px;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.mission p {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: -425px 150px auto auto;
+}
+
+img {
+    border-radius: 25px;
+    margin: 10px;   
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(224, 224, 224);
+} 
+
+.addInfo {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    height: 150px;
+    border-radius: 25px;
+    margin: 25px auto;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    border: 1px solid rgb(224, 224, 224);
 }
