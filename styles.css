@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url("/images/LightHouse.jpg");
+    background-image: url("./images/LightHouse.jpg");
 }
 
 header {
