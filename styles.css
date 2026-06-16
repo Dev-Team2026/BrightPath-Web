@@ -17,9 +17,14 @@ header {
     z-index: 10;
 }
 
+
 header a {
     text-decoration: none;
     color: white;
+}
+
+.previous-projects-page p, .previous-projects-page h3, .previous-projects-page h2, .previous-projects-page h1 {
+    text-align: center;
 }
 
 .companyName {
