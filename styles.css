@@ -133,8 +133,8 @@ header a {
 }
 
 
-ul {
-  width: 90vw;
+.carousel {
+  width: 50%;
   height: 300px;
   padding: 20px;
   display: flex;
@@ -142,6 +142,14 @@ ul {
   anchor-name: --my-carousel;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  margin: auto;
+  opacity: 80;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
 }
 
 ul::scroll-button(*) {
@@ -149,46 +157,54 @@ ul::scroll-button(*) {
   font-size: 2rem;
   background: none;
   color: black;
-  opacity: 0.7;
+  opacity: 1;
   cursor: pointer;
   position: absolute;
   position-anchor: --my-carousel;
+  transition: transform 0.15s ease-in-out;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  opacity: 1;
+  transform: scale(1.1);
 }
 
 ul::scroll-button(*):active {
+    opacity: 1;
   translate: 1px 1px;
 }
 
 ul::scroll-button(*):disabled {
-  opacity: 0.2;
+  transform: scale(1.0);
   cursor: unset;
+  color: gray;
 }
 
 ul::scroll-button(left) {
-  content: "◄" / "Previous";
-  right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top) + 13px);
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid silver;
+  content: "←" / "Previous";
+  right: calc(anchor(left) - 20px);
+  bottom: calc(anchor(top) - 200px);
 }
 
 ul::scroll-button(right) {
-  content: "►" / "Next";
-  left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top) + 13px);
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid silver;
+  content: "→" / "Next";
+  left: calc(anchor(right) - 20px);
+  bottom: calc(anchor(top) - 200px);
 }
 
 li {
   list-style-type: none;
+  border-radius: 30px;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
   padding: 20px;
-
   flex: 0 0 100%;
-
   scroll-snap-align: center;
 }
 
@@ -197,7 +213,8 @@ li {
   justify-content: space-between;
   align-items: center;          
   text-align: center;           
-  width: 100%;                  
+  width: 75%;              
+  margin: auto;    
 }
 
 .previous-projects img {
@@ -207,4 +224,17 @@ li {
 .previous-projects h2, .previous-projects h3 {
   flex-grow: 1;                 
   margin: 0 20px;               
+}
+
+.appDesc {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.pageDesc {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
 }
